@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lyfestyle | Minimalist Storefront</title>
+    <!-- Google Fonts: Inter, Poppins, and Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- SweetAlert2 for Toast Notifications -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Left: Brand Logo (Dynamic Image) -->
+            <div class="header-left">
+                <a href="#" class="logo-link">
+                    <img src="https://cdn.phototourl.com/free/2026-06-29-e99cdc1a-b1fb-411b-8e87-ef025abaca36.png" alt="lyfestyle logo" class="brand-logo-img">
+                </a>
+            </div>
+
+            <!-- Center: Search Bar -->
+            <div class="header-center">
+                <div class="search-bar-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="whats your interest" class="search-input" aria-label="Search products" id="search-input">
+                </div>
+            </div>
+
+            <!-- Right: Cart & Profile Icons -->
+            <div class="header-right">
+                <!-- Shopping Cart Button -->
+                <button class="cart-btn" id="cart-btn" aria-label="Shopping Cart">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </button>
+
+                <!-- Profile Button -->
+                <button class="profile-btn" aria-label="User Profile">
+                    <img src="https://cdn.phototourl.com/free/2026-06-29-13b01ab4-df8f-40fa-96bc-4092833cd23e.png" alt="User Profile" class="profile-avatar-img">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Full-Width Hero Section -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-subtitle">welcome to your ritual</p>
+                <div class="slider-container">
+                    <!-- Vanish Slider Slides -->
+                    <h1 class="slide-text active">intentional living, curated beautifully.</h1>
+                    <h1 class="slide-text">minimal essentials for modern spaces.</h1>
+                    <h1 class="slide-text">designed to elevate your everyday.</h1>
+                </div>
+                <a href="#products-grid" class="hero-cta-btn">explore arrivals</a>
+            </div>
+        </section>
+
+        <!-- Storefront Content Container -->
+        <div class="storefront-container">
+            
+            <!-- Horizontal Categories Container -->
+            <div class="categories-scroll-container">
+                <div class="categories-wrapper">
+                    <button class="category-item active">all items</button>
+                    <button class="category-item">self-care</button>
+                    <button class="category-item">accessories</button>
+                    <button class="category-item">home</button>
+                    <button class="category-item">wellness</button>
+                    <button class="category-item">living</button>
+                    <button class="category-item">apothecary</button>
+                    <button class="category-item">new arrivals</button>
+                </div>
+            </div>
+
+            <!-- Product Grid Section -->
+            <section class="products-section">
+                <div class="section-title-container">
+                    <h2 class="section-title">curated collection</h2>
+                    <span class="section-subtitle">handpicked essentials, limited run</span>
+                </div>
+                
+                <!-- Compact 2x2 Grid Container -->
+                <div class="products-grid products-2x2" id="products-grid">
+                    
+                    <!-- Product 1 -->
+                    <article class="product-card dynamic-card">
+                        <div class="image-wrapper">
+                            <div class="image-placeholder" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80')">
+                                <span class="discount-badge">-15%</span>
+                                <span class="product-category-badge">self-care</span>
+                                <button class="wishlist-btn" aria-label="Add to wishlist">
+                                    <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-meta">
+                                <span class="sold-count">142 sold</span>
+                            </div>
+                            <h3 class="product-title">botanical face mud</h3>
+                            <div class="price-container">
+                                <span class="product-price">$38.00</span>
+                                <span class="old-price">$45.00</span>
+                            </div>
+                            <button class="select-options-btn">select options</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card dynamic-card">
+                        <div class="image-wrapper">
+                            <div class="image-placeholder" style="background-image: url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80')">
+                                <span class="discount-badge">-10%</span>
+                                <span class="product-category-badge">accessories</span>
+                                <button class="wishlist-btn" aria-label="Add to wishlist">
+                                    <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-meta">
+                                <span class="sold-count">89 sold</span>
+                            </div>
+                            <h3 class="product-title">minimalist blush hand pouch</h3>
+                            <div class="price-container">
+                                <span class="product-price">$145.00</span>
+                                <span class="old-price">$160.00</span>
+                            </div>
+                            <button class="select-options-btn">select options</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card dynamic-card">
+                        <div class="image-wrapper">
+                            <div class="image-placeholder" style="background-image: url('https://images.unsplash.com/photo-1578500494198-246f612d3b3d?auto=format&fit=crop&w=600&q=80')">
+                                <span class="discount-badge">-20%</span>
+                                <span class="product-category-badge">home</span>
+                                <button class="wishlist-btn" aria-label="Add to wishlist">
+                                    <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-meta">
+                                <span class="sold-count">210 sold</span>
+                            </div>
+                            <h3 class="product-title">terracotta pedestal vase</h3>
+                            <div class="price-container">
+                                <span class="product-price">$62.00</span>
+                                <span class="old-price">$78.00</span>
+                            </div>
+                            <button class="select-options-btn">select options</button>
+                        </div>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card dynamic-card">
+                        <div class="image-wrapper">
+                            <div class="image-placeholder" style="background-image: url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80')">
+                                <span class="discount-badge">-5%</span>
+                                <span class="product-category-badge">wellness</span>
+                                <button class="wishlist-btn" aria-label="Add to wishlist">
+                                    <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-meta">
+                                <span class="sold-count">340 sold</span>
+                            </div>
+                            <h3 class="product-title">ceramic pink wellness mug</h3>
+                            <div class="price-container">
+                                <span class="product-price">$24.00</span>
+                                <span class="old-price">$25.20</span>
+                            </div>
+                            <button class="select-options-btn">select options</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Side Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="drawer-header">
+            <h3>your cart</h3>
+            <button class="close-drawer-btn" id="close-drawer-btn" aria-label="Close Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="drawer-content">
+            <!-- Empty Cart State -->
+            <div class="empty-cart-state" id="empty-cart-state">
+                <img src="https://cdn.phototourl.com/free/2026-06-29-e99cdc1a-b1fb-411b-8e87-ef025abaca36.png" alt="lyfestyle illustration logo" class="empty-cart-illustration">
+                <p class="empty-cart-text">your ritual is empty. let's add some essentials.</p>
+                <button class="shop-now-btn" id="drawer-shop-now-btn">shop essentials</button>
+            </div>
+            
+            <!-- Dynamic Cart Items Container -->
+            <div class="cart-items-container" id="cart-items-container" style="display: none;">
+                <!-- Dynamically populated via app.js -->
+            </div>
+        </div>
+        
+        <!-- Drawer Footer (Subtotal and Checkout Action) -->
+        <div class="drawer-footer" id="drawer-footer" style="display: none;">
+            <div class="subtotal-container">
+                <span class="subtotal-label">subtotal</span>
+                <span class="subtotal-price" id="cart-subtotal-price">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">proceed to checkout</button>
+        </div>
+    </div>
+
+    <!-- Side Cart Drawer Backdrop overlay -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+
+    <!-- Slide-Up Checkout Panel Modal -->
+    <div class="checkout-panel" id="checkout-panel">
+        <div class="panel-header">
+            <h3>delivery details</h3>
+            <button class="close-panel-btn" id="close-panel-btn" aria-label="Close Checkout Form">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <form class="checkout-form" id="checkout-form">
+            <div class="form-group">
+                <label for="shipping-name">full name</label>
+                <input type="text" id="shipping-name" placeholder="enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="shipping-phone">phone number</label>
+                <input type="tel" id="shipping-phone" placeholder="e.g., +1 234 567 890" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="shipping-address">delivery address</label>
+                <input type="text" id="shipping-address" placeholder="street name, apartment, unit" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="shipping-city">city</label>
+                    <input type="text" id="shipping-city" placeholder="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-zip">zip / postal code</label>
+                    <input type="text" id="shipping-zip" placeholder="zip code" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="order-notes">instructions for courier (optional)</label>
+                <textarea id="order-notes" rows="2" placeholder="leave gate codes, instructions etc."></textarea>
+            </div>
+
+            <div class="checkout-summary-box">
+                <span class="summary-total-label">total due:</span>
+                <span class="summary-total-price" id="checkout-total-price">$0.00</span>
+            </div>
+
+            <button type="submit" class="place-order-btn" id="place-order-btn">
+                <span class="btn-text-content">place order</span>
+                <div class="btn-loader" id="order-loader" style="display: none;"></div>
+            </button>
+        </form>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo-text">lyfestyle</span>
+                <p>curating beauty, intentionality, and comfort for modern everyday living.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-column">
+                    <h4>shop</h4>
+                    <ul>
+                        <li><a href="#">new arrivals</a></li>
+                        <li><a href="#">best sellers</a></li>
+                        <li><a href="#">gift sets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>our story</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">journal</a></li>
+                        <li><a href="#">philanthropy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>support</h4>
+                    <ul>
+                        <li><a href="#">shipping & returns</a></li>
+                        <li><a href="#">care guide</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 lyfestyle. all rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Main Application Script -->
+    <script src="app.js" defer></script>
+</body>
+</html>
